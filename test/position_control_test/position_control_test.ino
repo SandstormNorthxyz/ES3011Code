@@ -32,7 +32,7 @@ void loop() {
 
         Serial.print("Status: ");
         Serial.println(status);
- 
+
         // READ MOTOR VARIABLES IF TRANSMISSION IS SUCCESSFUL
         if (status < 1) {
             delay(DELAY_PERIOD);
@@ -43,7 +43,7 @@ void loop() {
         }
         Serial.println();
     }
-    
+
     target_pos+= ENCODER_TICKS_PER_SHAFT_REV;
     delay(DELAY_PERIOD);
-} 
+}

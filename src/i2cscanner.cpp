@@ -21,13 +21,14 @@
 //    A sensor seems to use address 120.
 // Version 6, November 27, 2015.
 //    Added waiting for the Leonardo serial communication.
-// 
+//
 //
 // This sketch tests the standard 7-bit addresses
 // Devices with higher bit address might not be seen properly.
 //
 
 #include <Wire.h>
+#include <Arduino.h>
 
 
 void setup()
@@ -48,7 +49,7 @@ void loop()
   Serial.println("Scanning...");
 
   nDevices = 0;
-  for(address = 1; address < 127; address++ ) 
+  for(address = 1; address < 127; address++ )
   {
     // The i2c_scanner uses the return value of
     // the Write.endTransmisstion to see if
@@ -59,20 +60,20 @@ void loop()
     if (error == 0)
     {
       Serial.print("I2C device found at address 0x");
-      if (address<16) 
+      if (address<16)
         Serial.print("0");
       Serial.print(address,HEX);
       Serial.println("  !");
 
       nDevices++;
     }
-    else if (error==4) 
+    else if (error==4)
     {
       Serial.print("Unknown error at address 0x");
-      if (address<16) 
+      if (address<16)
         Serial.print("0");
       Serial.println(address,HEX);
-    }    
+    }
   }
   if (nDevices == 0)
     Serial.println("No I2C devices found\n");

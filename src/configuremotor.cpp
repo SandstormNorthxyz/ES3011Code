@@ -2,6 +2,8 @@
 #include <Wire.h>
 #include <smartmotor.h>
 
+void block() { while(Serial.available() == 0) { delay(500); } }
+
 void setup() {
     Serial.begin(115200);
 
@@ -23,7 +25,7 @@ void setup() {
     String gear_ratio_str= Serial.readString();
     uint16_t new_gear_ratio= (uint16_t)gear_ratio_str.toInt();
 
-    // READ NEW DIRECTION (0 OR 1)? 
+    // READ NEW DIRECTION (0 OR 1)?
     Serial.println("ENTER DIRECTION (0: DIRECT, 1: REVERSE)... ");
     block();
     String new_direction_str= Serial.readString();
@@ -49,7 +51,5 @@ void setup() {
     Serial.print("DIRECTION: ");
     Serial.println(motor.get_current());
 }
-
-void block() { while(Serial.available() == 0) { delay(500); } }
 
 void loop() { }
