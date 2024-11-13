@@ -25,10 +25,10 @@ void loop() {
 
   test++;
   
-  // Telemetry::sendPacket(Telemetry::loopTime);
+  Telemetry::sendPacket(Telemetry::loopTime);
   Telemetry::sendPacket(Telemetry::test);
   Telemetry::update();
   // Serial.print("\n");
 
-  delay(20);
+  // delay(20);
 }
