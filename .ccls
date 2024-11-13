@@ -1,0 +1,33 @@
+clang
+
+%c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto
+%cpp -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto
+
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/include
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/src
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/smartmotor
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/simc_write
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/Header
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/simc_ops
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/pid_gains
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/simc_read
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/sensor_data
+-I/home/silas/.platformio/packages/framework-arduino-avr/libraries/Wire/src
+-I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino
+-I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/PID_v1
+-I/home/silas/WPI/classes/ES/3011/ES3011Code/lib/telometer
+-I/home/silas/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src
+-I/home/silas/.platformio/packages/framework-arduino-avr/libraries/HID/src
+-I/home/silas/.platformio/packages/framework-arduino-avr/libraries/SPI/src
+-I/home/silas/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src
+-I/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/lib/gcc/avr/7.3.0/include-fixed
+-I/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/lib/gcc/avr/7.3.0/include
+-I/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/avr/include
+
+-DPLATFORMIO=60115
+-DARDUINO_AVR_MEGA2560
+-DF_CPU=16000000L
+-DARDUINO_ARCH_AVR
+-DARDUINO=10808
+-D__AVR_ATmega2560__

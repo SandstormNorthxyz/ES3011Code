@@ -1,0 +1,176 @@
+[
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/CDC.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/CDC.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/CDC.cpp",
+        "output": ".pio/build/main/FrameworkArduino/CDC.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/HardwareSerial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial.cpp",
+        "output": ".pio/build/main/FrameworkArduino/HardwareSerial.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/HardwareSerial0.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial0.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial0.cpp",
+        "output": ".pio/build/main/FrameworkArduino/HardwareSerial0.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/HardwareSerial1.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial1.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial1.cpp",
+        "output": ".pio/build/main/FrameworkArduino/HardwareSerial1.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/HardwareSerial2.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial2.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial2.cpp",
+        "output": ".pio/build/main/FrameworkArduino/HardwareSerial2.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/HardwareSerial3.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial3.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/HardwareSerial3.cpp",
+        "output": ".pio/build/main/FrameworkArduino/HardwareSerial3.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/IPAddress.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/IPAddress.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/IPAddress.cpp",
+        "output": ".pio/build/main/FrameworkArduino/IPAddress.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/PluggableUSB.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/PluggableUSB.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/PluggableUSB.cpp",
+        "output": ".pio/build/main/FrameworkArduino/PluggableUSB.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/Print.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Print.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Print.cpp",
+        "output": ".pio/build/main/FrameworkArduino/Print.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/Stream.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Stream.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Stream.cpp",
+        "output": ".pio/build/main/FrameworkArduino/Stream.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/Tone.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Tone.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/Tone.cpp",
+        "output": ".pio/build/main/FrameworkArduino/Tone.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/USBCore.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/USBCore.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/USBCore.cpp",
+        "output": ".pio/build/main/FrameworkArduino/USBCore.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/WInterrupts.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WInterrupts.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WInterrupts.c",
+        "output": ".pio/build/main/FrameworkArduino/WInterrupts.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/WMath.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WMath.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WMath.cpp",
+        "output": ".pio/build/main/FrameworkArduino/WMath.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/WString.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WString.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/WString.cpp",
+        "output": ".pio/build/main/FrameworkArduino/WString.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/abi.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/abi.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/abi.cpp",
+        "output": ".pio/build/main/FrameworkArduino/abi.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/hooks.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/hooks.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/hooks.c",
+        "output": ".pio/build/main/FrameworkArduino/hooks.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/main.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/main.cpp",
+        "output": ".pio/build/main/FrameworkArduino/main.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/FrameworkArduino/new.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/new.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/new.cpp",
+        "output": ".pio/build/main/FrameworkArduino/new.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/wiring.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring.c",
+        "output": ".pio/build/main/FrameworkArduino/wiring.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/wiring_analog.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_analog.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_analog.c",
+        "output": ".pio/build/main/FrameworkArduino/wiring_analog.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/wiring_digital.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_digital.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_digital.c",
+        "output": ".pio/build/main/FrameworkArduino/wiring_digital.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -mmcu=atmega2560 -x assembler-with-cpp -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega -c -o .pio/build/main/FrameworkArduino/wiring_pulse.S.o /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.S",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.S",
+        "output": ".pio/build/main/FrameworkArduino/wiring_pulse.S.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/wiring_pulse.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_pulse.c",
+        "output": ".pio/build/main/FrameworkArduino/wiring_pulse.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-gcc -o .pio/build/main/FrameworkArduino/wiring_shift.c.o -c -std=gnu11 -fno-fat-lto-objects -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega /home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_shift.c",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino/wiring_shift.c",
+        "output": ".pio/build/main/FrameworkArduino/wiring_shift.c.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/lib160/telometer/MathUtils.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Ilib/telometer -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega lib/telometer/MathUtils.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "lib/telometer/MathUtils.cpp",
+        "output": ".pio/build/main/lib160/telometer/MathUtils.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/lib160/telometer/Telemetry.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Ilib/telometer -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega lib/telometer/Telemetry.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "lib/telometer/Telemetry.cpp",
+        "output": ".pio/build/main/lib160/telometer/Telemetry.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/lib160/telometer/serial.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Ilib/telometer -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega lib/telometer/serial.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "lib/telometer/serial.cpp",
+        "output": ".pio/build/main/lib160/telometer/serial.cpp.o"
+    },
+    {
+        "command": "/home/silas/.platformio/packages/toolchain-atmelavr@1.70300.191015/bin/avr-g++ -o .pio/build/main/src/main.cpp.o -c -fno-exceptions -fno-threadsafe-statics -fpermissive -std=gnu++11 -mmcu=atmega2560 -Os -Wall -ffunction-sections -fdata-sections -flto -DPLATFORMIO=60115 -DARDUINO_AVR_MEGA2560 -DF_CPU=16000000L -DARDUINO_ARCH_AVR -DARDUINO=10808 -Iinclude -Isrc -Ilib/telometer -I/home/silas/.platformio/packages/framework-arduino-avr/cores/arduino -I/home/silas/.platformio/packages/framework-arduino-avr/variants/mega src/main.cpp",
+        "directory": "/home/silas/WPI/classes/ES/3011/ES3011Code",
+        "file": "src/main.cpp",
+        "output": ".pio/build/main/src/main.cpp.o"
+    }
+]

@@ -9,7 +9,8 @@ X(robotEnabled, uint16_t)\
 X(loopTime, float)\
 X(cos, float)\
 X(sin, float)\
-X(fxcool, float)\
+X(temp, float)\
+X(test, uint16_t)\
 
 #define PACKET_TYPES(X) \
 X(uint16_t)\
