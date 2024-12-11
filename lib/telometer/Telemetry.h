@@ -13,7 +13,17 @@ X(temp, float)\
 X(test, uint16_t)\
 X(position, vec2f)\
 X(heading, angle)\
-
+X(leftStatus, uint8_t)\
+X(rightStatus, uint8_t)\
+X(leftRPM, float)\
+X(rightRPM, float)\
+X(leftPos, uint32_t)\
+X(rightPos, uint32_t)\
+X(P, float)\
+X(I, float)\
+X(D, float)\
+X(leftSetpoint, float)\
+X(rightSetpoint, float)\
 
 #define PACKET_TYPES(X) \
 X(uint16_t)\
