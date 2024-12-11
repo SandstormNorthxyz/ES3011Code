@@ -14,7 +14,7 @@ int test = 0;
 #define ENCODER_TICKS_PER_REV 12 // NO. OF HIGH PULSES PER ROTATION
 constexpr int32_t ENCODER_TICKS_PER_SHAFT_REV = ENCODER_TICKS_PER_REV * GEAR_RATIO;
 constexpr float TRACK_WIDTH_WHEEL_TICKS = ENCODER_TICKS_PER_SHAFT_REV * 0.597529;
-constexpr float CM_PER_TICK = 5.7 * 3.1415926535 * ENCODER_TICKS_PER_SHAFT_REV;
+constexpr float CM_PER_TICK = 5.7 * 3.1415926535 / ENCODER_TICKS_PER_SHAFT_REV;
 
 #define DELAY_PERIOD 0
 
@@ -31,8 +31,8 @@ float leftSetpoint = 0;
 float rightSetpoint = 0;
 // SmartMotor motors[] = {0x05,0x06,0x07}; // INIT MOTOR W/ DEFAULT ADDRESS
 
-vec2<float> pos;
-angle dir;
+vec2<float> pos = {0, 0};
+angle dir = {{0, 0}};
 
 void update_odometry() {
   static float prevWheelAngle = 0;
@@ -102,6 +102,9 @@ void loop() {
   rightRPM = rightMotor.get_rpm();
   leftPos = leftMotor.get_position();
   rightPos = rightMotor.get_position();
+
+
+  update_odometry();
 
   #ifndef USETELOMETER
     Serial.print("lStat:"); Serial.print(leftStatus);
