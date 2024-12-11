@@ -11,8 +11,6 @@ X(cos, float)\
 X(sin, float)\
 X(temp, float)\
 X(test, uint16_t)\
-X(position, vec2f)\
-X(heading, angle)\
 X(leftStatus, uint8_t)\
 X(rightStatus, uint8_t)\
 X(leftRPM, float)\
@@ -23,7 +21,9 @@ X(P, float)\
 X(I, float)\
 X(D, float)\
 X(leftSetpoint, float)\
-X(rightSetpoint, float)\
+X(rightSetpoint, float) \
+//X(position, vec2f)\
+//X(heading, angle)\
 
 #define PACKET_TYPES(X) \
 X(uint16_t)\
@@ -31,8 +31,8 @@ X(int16_t)\
 X(float)\
 X(uint32_t)\
 X(uint8_t)\
-X(angle)\
-X(vec2f)\
+//X(angle)\
+//X(vec2f)\
 
 #define PACKET_TYPE_FORMAT(t) t##_packet,
 #define UNION(type) type type##_packet;

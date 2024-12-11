@@ -25,8 +25,8 @@ float leftSetpoint = 0;
 float rightSetpoint = 0;
 // SmartMotor motors[] = {0x05,0x06,0x07}; // INIT MOTOR W/ DEFAULT ADDRESS
 
-vec2<float> pos;
-angle dir;
+//vec2<float> pos;
+//angle dir;
 
 void setup() {
   Serial.begin(115200);
