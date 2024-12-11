@@ -14,7 +14,7 @@ int test = 0;
 #define ENCODER_TICKS_PER_REV 12 // NO. OF HIGH PULSES PER ROTATION
 constexpr int32_t ENCODER_TICKS_PER_SHAFT_REV = ENCODER_TICKS_PER_REV * GEAR_RATIO;
 constexpr float TRACK_WIDTH_WHEEL_TICKS = ENCODER_TICKS_PER_SHAFT_REV * 0.597529;
-constexpr float CM_PER_TICK = 5.7 * 3.1415926535 * ENCODER_TICKS_PER_SHAFT_REV;
+constexpr float CM_PER_TICK = 5.7 * 3.1415926535 / ENCODER_TICKS_PER_SHAFT_REV;
 
 #define DELAY_PERIOD 0
 
@@ -35,15 +35,14 @@ float I = 0;
 float D = 0.006;
 // SmartMotor motors[] = {0x05,0x06,0x07}; // INIT MOTOR W/ DEFAULT ADDRESS
 
-vec2<float> pos;
-angle dir;
-
-vec2<float> target;
+vec2<float> pos = {0, 0};
+vec2<float> target = {0, 0};
+angle dir = (angle){{0, 1}};
 
 void update_odometry() {
   static float prevWheelAngle = 0;
   static vec2<int32_t> prevWheelTicks = {0, 0};
-  vec2<int32_t> wheelTicks = {rightMotor.get_position(), leftMotor.get_position()};
+  vec2<int32_t> wheelTicks = {rightMotor.get_position(), -leftMotor.get_position()};
 
 
   float wheel_angle = (wheelTicks.x - wheelTicks.y) / TRACK_WIDTH_WHEEL_TICKS; //this could potentially be more fixed-point
@@ -91,7 +90,7 @@ void setup() {
     Telemetry::initPacket(Telemetry::rightSetpoint, &rightSetpoint);
 
     Telemetry::initPacket(Telemetry::position, &pos);
-    Telemetry::initPacket(Telemetry::position, &target);
+    Telemetry::initPacket(Telemetry::targetPosition, &target);
     Telemetry::initPacket(Telemetry::heading, &dir);
 
     Telemetry::initPacket(Telemetry::P, &P);
@@ -100,14 +99,17 @@ void setup() {
   #endif
 }
 
-
 void driveToTarget() {
-  vec2<float> error = pos - target;
+  vec2<float> error = target - pos;
   float lin = error * dir.angle;
 
-  float angular = MathUtils::angle_between_vectors(dir.angle, error);
-
+  float angular = MathUtils::getRadians(MathUtils::angle_between_vectors(vec3<float>{dir.angle.x, dir.angle.y, 0}, vec3<float>{error.x, error.y, 0}));
   
+  leftSetpoint = lin * P;
+  rightSetpoint = lin * P;
+
+  leftStatus = leftMotor.set_rpm(5);
+  rightStatus = rightMotor.set_rpm(5);
 }
 
 void loop() {
@@ -119,13 +121,14 @@ void loop() {
   leftMotor.tune_vel_pid(P, I, D);
   rightMotor.tune_vel_pid(P, I, D);
 
-  leftStatus = leftMotor.set_rpm(leftSetpoint);
-  rightStatus = rightMotor.set_rpm(rightSetpoint);
-  
   leftRPM = leftMotor.get_rpm();
   rightRPM = rightMotor.get_rpm();
   leftPos = leftMotor.get_position();
   rightPos = rightMotor.get_position();
+
+  driveToTarget();
+
+  update_odometry();
 
   #ifndef USETELOMETER
     Serial.print("lStat:"); Serial.print(leftStatus);
