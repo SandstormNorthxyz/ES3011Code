@@ -44,11 +44,11 @@ void setup() {
     delay(1000);
     Serial.println("DONE...");
 
-    Serial.print("Position: ");
+    Serial.print("Position:");
     Serial.println(motor.get_position());
-    Serial.print("RPM: ");
+    Serial.print(",RPM:");
     Serial.println(motor.get_rpm());
-    Serial.print("DIRECTION: ");
+    Serial.print("Current:");
     Serial.println(motor.get_current());
 }
 
