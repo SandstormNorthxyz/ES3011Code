@@ -38,6 +38,8 @@ float D = 0;
 vec2<float> pos;
 angle dir;
 
+vec2<float> target;
+
 void update_odometry() {
   static float prevWheelAngle = 0;
   static vec2<int32_t> prevWheelTicks = {0, 0};
@@ -89,12 +91,23 @@ void setup() {
     Telemetry::initPacket(Telemetry::rightSetpoint, &rightSetpoint);
 
     Telemetry::initPacket(Telemetry::position, &pos);
+    Telemetry::initPacket(Telemetry::position, &target);
     Telemetry::initPacket(Telemetry::heading, &dir);
 
     Telemetry::initPacket(Telemetry::P, &P);
     Telemetry::initPacket(Telemetry::I, &I);
     Telemetry::initPacket(Telemetry::D, &D);
   #endif
+}
+
+
+void driveToTarget() {
+  vec2<float> error = pos - target;
+  float lin = error * dir.angle;
+
+  float angular = MathUtils::angle_between_vectors(dir.angle, error);
+
+  
 }
 
 void loop() {
