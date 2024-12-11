@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include <Telemetry.h>
+#include "MathUtils.h"
 #include "smartmotor.h"
 
 float dt = 0;
@@ -9,7 +10,10 @@ int test = 0;
 // MOTOR PROPERTIES
 #define GEAR_RATIO 150           // MOTOR GEAR RATIO
 #define ENCODER_TICKS_PER_REV 12 // NO. OF HIGH PULSES PER ROTATION
-const int32_t ENCODER_TICKS_PER_SHAFT_REV= ENCODER_TICKS_PER_REV * GEAR_RATIO;
+constexpr int32_t ENCODER_TICKS_PER_SHAFT_REV = ENCODER_TICKS_PER_REV * GEAR_RATIO;
+constexpr float TRACK_WIDTH_WHEEL_TICKS = ENCODER_TICKS_PER_SHAFT_REV * 0.597529;
+constexpr float CM_PER_TICK = 5.7 * 3.1415926535 * ENCODER_TICKS_PER_SHAFT_REV;
+
 #define DELAY_PERIOD 0
 
 // INIT SMART MOTORS
@@ -27,6 +31,35 @@ float rightSetpoint = 0;
 
 vec2<float> pos;
 angle dir;
+
+void update_odometry() {
+  static float prevWheelAngle = 0;
+  static vec2<int32_t> prevWheelTicks = {0, 0};
+  vec2<int32_t> wheelTicks = {rightMotor.get_position(), leftMotor.get_position()};
+
+
+  float wheel_angle = (wheelTicks.x - wheelTicks.y) / TRACK_WIDTH_WHEEL_TICKS; //this could potentially be more fixed-point
+  float delta_theta = wheel_angle - prevWheelAngle;
+  prevWheelAngle = wheel_angle;
+
+
+  vec2<int32_t> wheelDelta = (wheelTicks - prevWheelTicks);
+  prevWheelTicks = wheelTicks;
+
+  angle deltaA = MathUtils::angleFromRadians(delta_theta);
+  float d = (wheelDelta.x + wheelDelta.y) / 2.0;
+  d *= CM_PER_TICK;
+
+  if (delta_theta == 0) {
+    pos = pos + (dir).angle * d;
+  } else {
+    float r = d / MathUtils::getRadians(deltaA);
+    pos = pos + MathUtils::rotate<vec2<float>>({r * deltaA.angle.y, r - r * deltaA.angle.x}, dir);
+  }
+
+  dir = dir + deltaA;
+}
+
 
 void setup() {
   Serial.begin(115200);
@@ -68,10 +101,10 @@ void loop() {
 
   Telemetry::sendPacket(Telemetry::loopTime);
   Telemetry::sendPacket(Telemetry::test);
-  Telemetry::sendPacket(Telemetry::leftStatus);
-  Telemetry::sendPacket(Telemetry::rightStatus);
-  Telemetry::sendPacket(Telemetry::leftRPM);
-  Telemetry::sendPacket(Telemetry::rightRPM);
+  // Telemetry::sendPacket(Telemetry::leftStatus);
+  // Telemetry::sendPacket(Telemetry::rightStatus);
+  // Telemetry::sendPacket(Telemetry::leftRPM);
+  // Telemetry::sendPacket(Telemetry::rightRPM);
   Telemetry::sendPacket(Telemetry::leftPos);
   Telemetry::sendPacket(Telemetry::rightPos);
   Telemetry::update();

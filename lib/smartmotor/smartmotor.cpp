@@ -1,5 +1,5 @@
 #include "smartmotor.h"
-#include <header.h>
+#include <Header.h>
 #include <simc_write.h>
 #include <simc_ops.h>
 #include <pid_gains.h>
