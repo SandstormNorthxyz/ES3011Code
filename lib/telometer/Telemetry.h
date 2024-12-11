@@ -30,6 +30,9 @@ X(uint16_t)\
 X(int16_t)\
 X(float)\
 X(uint32_t)\
+X(uint8_t)\
+X(angle)\
+X(vec2f)\
 
 #define PACKET_TYPE_FORMAT(t) t##_packet,
 #define UNION(type) type type##_packet;
