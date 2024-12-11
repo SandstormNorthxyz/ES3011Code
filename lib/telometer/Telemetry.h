@@ -11,6 +11,9 @@ X(cos, float)\
 X(sin, float)\
 X(temp, float)\
 X(test, uint16_t)\
+X(position, vec2f)\
+X(heading, angle)\
+
 
 #define PACKET_TYPES(X) \
 X(uint16_t)\

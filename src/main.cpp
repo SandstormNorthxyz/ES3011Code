@@ -6,12 +6,15 @@ float dt = 0;
 long last_update_time = 0;
 int test = 0; 
 
+vec2<float> pos;
+angle dir;
+
 void setup() {
   Serial.begin(115200);
 
   Telemetry::init();
 
-
+  
   Telemetry::initPacket(Telemetry::loopTime, &dt);
   Telemetry::initPacket(Telemetry::test, &test);
   
@@ -30,5 +33,5 @@ void loop() {
   Telemetry::update();
   // Serial.print("\n");
 
-  // delay(20);
+  delay(20);
 }
