@@ -15,8 +15,8 @@ const int32_t ENCODER_TICKS_PER_SHAFT_REV= ENCODER_TICKS_PER_REV * GEAR_RATIO;
 // INIT SMART MOTORS
 SmartMotor leftMotor = 0x0A; // INIT MOTOR W/ DEFAULT ADDRESS
 SmartMotor rightMotor = 0x0B;
-uint8_t leftStatus = 0;
-uint8_t rightStatus = 0;
+uint16_t leftStatus = 0;
+uint16_t rightStatus = 0;
 float leftRPM = 0;
 float rightRPM = 0;
 uint32_t leftPos = 0;

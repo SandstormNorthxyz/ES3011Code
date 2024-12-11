@@ -11,8 +11,8 @@ X(cos, float)\
 X(sin, float)\
 X(temp, float)\
 X(test, uint16_t)\
-X(leftStatus, uint8_t)\
-X(rightStatus, uint8_t)\
+X(leftStatus, uint16_t)\
+X(rightStatus, uint16_t)\
 X(leftRPM, float)\
 X(rightRPM, float)\
 X(leftPos, uint32_t)\
