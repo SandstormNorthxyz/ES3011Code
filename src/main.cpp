@@ -2,6 +2,8 @@
 #include <Telemetry.h>
 #include "smartmotor.h"
 
+//#define USETELOMETER true
+
 float dt = 0;
 long last_update_time = 0;
 int test = 0;
@@ -32,23 +34,23 @@ void setup() {
   Serial.begin(115200);
   Wire.begin();
 
-  Telemetry::init();
+  #ifdef USETELOMETER
+    Telemetry::init();
 
-  
-  Telemetry::initPacket(Telemetry::loopTime, &dt);
-  Telemetry::initPacket(Telemetry::test, &test);
+    Telemetry::initPacket(Telemetry::loopTime, &dt);
+    Telemetry::initPacket(Telemetry::test, &test);
 
-  Telemetry::initPacket(Telemetry::leftStatus, &leftStatus);
-  Telemetry::initPacket(Telemetry::rightStatus, &rightStatus);
+    Telemetry::initPacket(Telemetry::leftStatus, &leftStatus);
+    Telemetry::initPacket(Telemetry::rightStatus, &rightStatus);
 
-  Telemetry::initPacket(Telemetry::leftRPM, &leftRPM);
-  Telemetry::initPacket(Telemetry::rightRPM, &rightRPM);
-  Telemetry::initPacket(Telemetry::leftPos, &leftPos);
-  Telemetry::initPacket(Telemetry::rightPos, &rightPos);
+    Telemetry::initPacket(Telemetry::leftRPM, &leftRPM);
+    Telemetry::initPacket(Telemetry::rightRPM, &rightRPM);
+    Telemetry::initPacket(Telemetry::leftPos, &leftPos);
+    Telemetry::initPacket(Telemetry::rightPos, &rightPos);
 
-  Telemetry::initPacket(Telemetry::leftSetpoint, &leftSetpoint);
-  Telemetry::initPacket(Telemetry::rightSetpoint, &rightSetpoint);
-  
+    Telemetry::initPacket(Telemetry::leftSetpoint, &leftSetpoint);
+    Telemetry::initPacket(Telemetry::rightSetpoint, &rightSetpoint);
+  #endif
 }
 
 void loop() {
@@ -65,16 +67,29 @@ void loop() {
   leftPos = leftMotor.get_position();
   rightPos = rightMotor.get_position();
 
+  #ifndef USETELOMETER
+    Serial.print("lStat:"); Serial.print(leftStatus);
+    Serial.print(",rStat:"); Serial.print(rightStatus);
+    Serial.print(",lRPM:"); Serial.print(leftRPM);
+    Serial.print(",rRPM:"); Serial.print(rightRPM);
+    Serial.print(",lPos:"); Serial.print(leftPos);
+    Serial.print(",rPos:"); Serial.print(rightPos);
 
-  Telemetry::sendPacket(Telemetry::loopTime);
-  Telemetry::sendPacket(Telemetry::test);
-  Telemetry::sendPacket(Telemetry::leftStatus);
-  Telemetry::sendPacket(Telemetry::rightStatus);
-  Telemetry::sendPacket(Telemetry::leftRPM);
-  Telemetry::sendPacket(Telemetry::rightRPM);
-  Telemetry::sendPacket(Telemetry::leftPos);
-  Telemetry::sendPacket(Telemetry::rightPos);
-  Telemetry::update();
+    Serial.println();
+  #endif
+
+  #ifdef USETELOMETER
+    Telemetry::sendPacket(Telemetry::loopTime);
+    Telemetry::sendPacket(Telemetry::test);
+    Telemetry::sendPacket(Telemetry::leftStatus);
+    Telemetry::sendPacket(Telemetry::rightStatus);
+    Telemetry::sendPacket(Telemetry::leftRPM);
+    Telemetry::sendPacket(Telemetry::rightRPM);
+    Telemetry::sendPacket(Telemetry::leftPos);
+    Telemetry::sendPacket(Telemetry::rightPos);
+    Telemetry::update();
+  #endif
+
 
   test++;
 
