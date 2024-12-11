@@ -29,6 +29,10 @@ uint32_t leftPos = 0;
 uint32_t rightPos = 0;
 float leftSetpoint = 0;
 float rightSetpoint = 0;
+
+float P = 0;
+float I = 0;
+float D = 0;
 // SmartMotor motors[] = {0x05,0x06,0x07}; // INIT MOTOR W/ DEFAULT ADDRESS
 
 vec2<float> pos;
@@ -86,6 +90,10 @@ void setup() {
 
     Telemetry::initPacket(Telemetry::position, &pos);
     Telemetry::initPacket(Telemetry::heading, &dir);
+
+    Telemetry::initPacket(Telemetry::P, &P);
+    Telemetry::initPacket(Telemetry::I, &I);
+    Telemetry::initPacket(Telemetry::D, &D);
   #endif
 }
 
@@ -95,6 +103,7 @@ void loop() {
   // Serial.println("Hello");
   // delay(20);
 
+  leftMotor.tune_vel_pid(P, I, D);
   leftStatus = leftMotor.set_rpm(leftSetpoint);
   rightStatus = rightMotor.set_rpm(rightSetpoint);
   
