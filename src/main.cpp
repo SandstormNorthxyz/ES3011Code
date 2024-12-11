@@ -88,6 +88,9 @@ void setup() {
     Telemetry::initPacket(Telemetry::leftSetpoint, &leftSetpoint);
     Telemetry::initPacket(Telemetry::rightSetpoint, &rightSetpoint);
 
+    Telemetry::initPacket(Telemetry::position, &pos);
+    Telemetry::initPacket(Telemetry::heading, &dir);
+
     Telemetry::initPacket(Telemetry::P, &P);
     Telemetry::initPacket(Telemetry::I, &I);
     Telemetry::initPacket(Telemetry::D, &D);
@@ -131,6 +134,8 @@ void loop() {
     Telemetry::sendPacket(Telemetry::rightRPM);
     Telemetry::sendPacket(Telemetry::leftPos);
     Telemetry::sendPacket(Telemetry::rightPos);
+    Telemetry::sendPacket(Telemetry::position);
+    Telemetry::sendPacket(Telemetry::heading);
     Telemetry::update();
   #endif
 
