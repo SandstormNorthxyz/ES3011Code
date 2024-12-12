@@ -25,6 +25,9 @@ X(rightSetpoint, float) \
 X(position, vec2f)\
 X(heading, angle)\
 X(targetPosition, vec2f)\
+X(aoirsetna, uint16_t)\
+X(P1, float)\
+X(P2, float)\
 
 #define PACKET_TYPES(X) \
 X(uint16_t)\
