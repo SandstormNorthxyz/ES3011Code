@@ -48,7 +48,7 @@ uint16_t fine = 0;
 void update_odometry() {
   static float prevWheelAngle = 0;
   static vec2<int32_t> prevWheelTicks = {0, 0};
-  vec2<int32_t> wheelTicks = {rightMotor.get_position(), -leftMotor.get_position()};
+  vec2<int32_t> wheelTicks = {-rightMotor.get_position(), leftMotor.get_position()};
 
 
   float wheel_angle = (wheelTicks.x - wheelTicks.y) / TRACK_WIDTH_WHEEL_TICKS; //this could potentially be more fixed-point
@@ -140,15 +140,15 @@ bool turnToTarget() {
 
   float angular = MathUtils::getRadians(dir - (angle){.angle = MathUtils::normalize(error)});
 
-  if(abs(angular) < 0.01) {
+  if(abs(angular) < 0.1) {
     leftSetpoint = 0;
     rightSetpoint = 0;
     return true;
   }
   
   leftSetpoint  = angular * P2;
-  rightSetpoint = angular * P2;
-
+  rightSetpoint = -angular * P2;
+  return false;
 }
 
 vec2<float> path[] = {{0, 2.54 * 12}, {2.54*12, 2.54*12}};
@@ -178,15 +178,15 @@ void loop() {
     }
   }
   else {
-    if(driveToTarget() && fine < 2) {
+    if(driveToTarget() && fine < 1) {
       fine ++;
       turning = true;
     }
   }
 
 
-  leftStatus = leftMotor.set_rpm(-leftSetpoint);
-  rightStatus = rightMotor.set_rpm(rightSetpoint);
+  leftStatus = leftMotor.set_rpm(leftSetpoint);
+  rightStatus = rightMotor.set_rpm(-rightSetpoint);
 
 
   #ifndef USETELOMETER
@@ -211,14 +211,14 @@ void loop() {
     Telemetry::sendPacket(Telemetry::rightPos);
     Telemetry::sendPacket(Telemetry::position);
     Telemetry::sendPacket(Telemetry::heading);
+    Telemetry::sendPacket(Telemetry::aoirsetna);
     Telemetry::sendPacket(Telemetry::rightSetpoint);
     Telemetry::sendPacket(Telemetry::leftSetpoint);
     Telemetry::sendPacket(Telemetry::targetPosition);
-    Telemetry::sendPacket(Telemetry::aoirsetna);
     Telemetry::update();
   #endif
 
   test++;
 
-  delay(20);
+  // delay(30);
 }

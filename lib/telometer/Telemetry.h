@@ -7,12 +7,11 @@
 #define PACKETS(X) \
 X(robotEnabled, uint16_t)\
 X(loopTime, float)\
-X(cos, float)\
-X(sin, float)\
 X(temp, float)\
 X(test, uint16_t)\
 X(leftStatus, uint16_t)\
 X(rightStatus, uint16_t)\
+X(aoirsetna, uint16_t)\
 X(leftRPM, float)\
 X(rightRPM, float)\
 X(leftPos, uint32_t)\
@@ -25,7 +24,6 @@ X(rightSetpoint, float) \
 X(position, vec2f)\
 X(heading, angle)\
 X(targetPosition, vec2f)\
-X(aoirsetna, uint16_t)\
 X(P1, float)\
 X(P2, float)\
 
