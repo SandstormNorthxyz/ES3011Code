@@ -19,7 +19,7 @@ constexpr float CM_PER_TICK = 5.7 * 3.1415926535 / ENCODER_TICKS_PER_SHAFT_REV;
 #define DELAY_PERIOD 0
 
 // INIT SMART MOTORS
-SmartMotor leftMotor = 0x0A; // INIT MOTOR W/ DEFAULT ADDRESS
+SmartMotor leftMotor = 0x09; // INIT MOTOR W/ DEFAULT ADDRESS
 SmartMotor rightMotor = 0x0B;
 uint16_t leftStatus = 0;
 uint16_t rightStatus = 0;
@@ -42,7 +42,7 @@ angle dir = (angle){{0, 1}};
 void update_odometry() {
   static float prevWheelAngle = 0;
   static vec2<int32_t> prevWheelTicks = {0, 0};
-  vec2<int32_t> wheelTicks = {rightMotor.get_position(), -leftMotor.get_position()};
+  vec2<int32_t> wheelTicks = {rightMotor.get_position(), leftMotor.get_position()};
 
 
   float wheel_angle = (wheelTicks.x - wheelTicks.y) / TRACK_WIDTH_WHEEL_TICKS; //this could potentially be more fixed-point
@@ -108,8 +108,6 @@ void driveToTarget() {
   leftSetpoint = lin * P;
   rightSetpoint = lin * P;
 
-  leftStatus = leftMotor.set_rpm(5);
-  rightStatus = rightMotor.set_rpm(5);
 }
 
 void loop() {
@@ -126,9 +124,11 @@ void loop() {
   leftPos = leftMotor.get_position();
   rightPos = rightMotor.get_position();
 
-  driveToTarget();
+  // driveToTarget();
 
   update_odometry();
+  leftStatus = leftMotor.set_rpm(leftSetpoint);
+  rightStatus = rightMotor.set_rpm(rightSetpoint);
 
   #ifndef USETELOMETER
     Serial.print("lStat:"); Serial.print(leftStatus);
